@@ -20,16 +20,18 @@ function Home() {
       }, []);
 
   return (
-    <div className='min-h-screen  bg-Red flex flex-col items-center' 
+    <div className='min-h-screen lg:max-h-screen bg-Red flex flex-col lg:flex-row items-center lg:justify-center ' 
     style={{ backgroundImage: isMobile ?
     'url(/assets/bg-intro-mobile.png)' : 'url(/assets/bg-intro-desktop.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        
-        <h1 className='text-neutral-50 text-3xl font-semibold font-Poppins p-24 pb-10 text-center'> Learn to code by watching others</h1>
-        <p className='text-neutral-50 text-xl font-normal font-Poppins px-10 text-center'>
+        <div className='flex flex-col items-center  lg:gap-8 lg:w-2/5 '>
+        <h1 className='text-neutral-50 text-3xl lg:text-5xl font-semibold font-Poppins  lg:p-0 lg:pl-10 pt-24 px-10 pb-10 lg:text-left text-center'> Learn to code by watching others</h1>
+        <p className='text-neutral-50 text-base font-normal font-Poppins px-10   lg:text-left text-center'>
         See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
         but understanding how developers think is invaluable. 
         </p>
-        <div className='w-full h-full  flex  flex-col items-center gap-8 py-20'>
+        </div>
+       
+        <div className='w-full h-full lg:w-2/5  flex  flex-col items-center lg:items-start gap-8  lg:py-0 py-20'>
             <TrialCard/>
             <Form/>
         </div>
