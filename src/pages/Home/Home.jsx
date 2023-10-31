@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import TrialCard from '../../components/Cards/TrialCard';
+import Form from '../../components/Forms/Form';
 
 function Home() {
     const [isMobile, setIsMobile] = useState(false);
@@ -19,7 +20,7 @@ function Home() {
       }, []);
 
   return (
-    <div className='min-h-screen bg-Red flex flex-col items-center' 
+    <div className='min-h-screen  bg-Red flex flex-col items-center' 
     style={{ backgroundImage: isMobile ?
     'url(/assets/bg-intro-mobile.png)' : 'url(/assets/bg-intro-desktop.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         
@@ -28,9 +29,9 @@ function Home() {
         See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
         but understanding how developers think is invaluable. 
         </p>
-        <div className='w-full flex  flex-col items-center py-20'>
+        <div className='w-full h-full  flex  flex-col items-center gap-8 py-20'>
             <TrialCard/>
-            
+            <Form/>
         </div>
     </div>
   )
